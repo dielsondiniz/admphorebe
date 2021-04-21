@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import FormItem from './FormItem';
 import { DataGrid } from '@material-ui/data-grid';
 
@@ -8,7 +8,6 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
 import axios from 'axios';
 export default function Cadastro(props) {
     const columns = [
@@ -23,12 +22,12 @@ export default function Cadastro(props) {
       const [crianca, setCrianca] = useState(0);
       const [obs, setObs] = useState("");     
 
-      function salvar1() {
+      /*function salvar1() {
         let url = 'https://sheetdb.io/api/v1/b375knfkod0r3';
         fetch(url, { method: 'POST', body: {"data": [{"nome": nome, "adulto": adulto, "crianca": crianca, "data": "25/04/2020", "horario": props.culto, "obs": obs }]} }).then((response)=>
             console.log(response)
         )
-      }
+      }*/
       function salvar() {
         let url = 'https://sheetdb.io/api/v1/b375knfkod0r3';
         axios.post(url, {"data": {"nome": nome, "adulto": adulto, "crianca": crianca, "data": "25/04/2020", "horario": props.culto, "obs": obs }}).then((response)=>

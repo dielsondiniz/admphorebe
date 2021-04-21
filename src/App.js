@@ -24,10 +24,10 @@ function App() {
     let url = 'https://sheetdb.io/api/v1/b375knfkod0r3';
     fetch(url, { method: 'GET', headers: { 'content-type': 'application/x-www-form-urlencoded' } }).then(function(response){
       response.json().then(function (data) {
-        setCadastros1(data.filter((lista) => {return lista.horario == 1}));
-        setCadastros2(data.filter((lista) => {return lista.horario == 2}));
-        setCountCulto1(data.filter((lista) => {return lista.horario == 1}).reduce((sum, list)=> { return (sum + (list.adulto*1) + (list.crianca*1))},0));
-        setCountCulto2(data.filter((lista) => {return lista.horario == 2}).reduce((sum, list)=> { return (sum + (list.adulto*1) + (list.crianca*1))},0));
+        setCadastros1(data.filter((lista) => {return Number(lista.horario) === 1}));
+        setCadastros2(data.filter((lista) => {return Number(lista.horario) === 2}));
+        setCountCulto1(data.filter((lista) => {return Number(lista.horario) === 1}).reduce((sum, list)=> { return (sum + (list.adulto*1) + (list.crianca*1))},0));
+        setCountCulto2(data.filter((lista) => {return Number(lista.horario) === 2}).reduce((sum, list)=> { return (sum + (list.adulto*1) + (list.crianca*1))},0));
 
       });
     })
