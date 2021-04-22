@@ -50,7 +50,7 @@ function App() {
             <b>Preletor:</b> Pastor João Wagner<br/>
             <span style={{color: 'red'}}><b>Vagas:</b> {VAGASTOTAIS - countCulto1}</span>
           </ContainerCulto>
-          <ContainerCulto onClick={()=> setCulto(PRIMEIRO)}>
+          <ContainerCulto onClick={()=> setCulto(SEGUNDO)}>
             <h4 style={{textAlign: 'center'}}><b>2° Culto </b><br/></h4>
             <b>Horario:</b> 18:30 às 19:30<br/>
             <b>Direção:</b> Liderança dos Adolescentes<br/>
