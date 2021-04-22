@@ -59,7 +59,7 @@ export default function Cadastro(props) {
             <b>Preencha o formulário abaixo para informar sua participação no {props.culto}º culto</b>
         </div>
 
-        <div style={{width: '800px', margin: 'auto', padding: '25px',background: 'rgb(243 243 243 / 80%)', boxShadow: '6px 6px 7px 4px rgb(97 97 97 / 77%)'}}>
+        <div style={{width: '800px', maxWidth: '100%', margin: 'auto', padding: '25px', background: 'rgb(243 243 243 / 80%)', boxShadow: '6px 6px 7px 4px rgb(97 97 97 / 77%)'}}>
             <form className={classes.root} noValidate autoComplete="off">
             <TextField id="nome" value={nome} onChange={(event)=> setNome(event.target.value)} label="Nome: " helperText="digite o seu nome" variant="outlined" fullWidth />
             <TextField id="adulto" type='number' value={adulto} onChange={(event)=> setAdulto(event.target.value)} label="Adulto: " helperText="digite a quantidade de adultos incluindo você." variant="outlined" fullWidth />
@@ -72,7 +72,7 @@ export default function Cadastro(props) {
             </form>
         </div>
 
-        <div style={{ width: '500px', margin: 'auto', marginTop: '25px', background: 'rgb(243 243 243 / 80%)' }}>
+        <div style={{ width: '500px', maxWidth: '100%', margin: 'auto', marginTop: '25px', background: 'rgb(243 243 243 / 80%)', boxShadow: '6px 6px 7px 4px rgb(97 97 97 / 77%)' }}>
         <TableContainer>
             <Table  size="small" aria-label="a dense table">
                 <TableHead>
