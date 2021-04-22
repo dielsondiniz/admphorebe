@@ -105,7 +105,7 @@ function App() {
           </ContainerCulto>
         </FlexContainer>
         :
-        <Cadastro culto={culto} lista={culto === 1? cadastros1: cadastros2} loadCadastros={()=>loadCadastros()} />
+        <Cadastro culto={culto} lista={culto === 1? cadastros1: cadastros2} loadCadastros={()=>loadCadastros()} dataCulto={data} />
       }
     <GlobalStyle/>
     </Container>
