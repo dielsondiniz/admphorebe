@@ -59,8 +59,8 @@ function App() {
         setDirecao2(data.direcao2)
         setBanda1(data.banda1)
         setBanda2(data.banda2)
-        setPreletor1(data.preletor1)
-        setPreletor2(data.preletor2)
+        //setPreletor1(data.preletor1)
+        //setPreletor2(data.preletor2)
         setVagas1(data.vagas1)
         setVagas2(data.vagas2)
 
