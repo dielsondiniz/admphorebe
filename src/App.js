@@ -51,7 +51,8 @@ function App() {
   function loadInfos(){
     let url = 'https://sheetdb.io/api/v1/b375knfkod0r3?sheet=culto';
     fetch(url, { method: 'GET', headers: { 'content-type': 'application/x-www-form-urlencoded' } }).then(function(response){
-      response.json().then(function (data) {
+      response.json().then(function (datas) {
+        let data = datas[0];
         setData(data.data)
         setNomeCulto(data.nomeCulto1)
         setDirecao1(data.direcao1)
