@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import { Container, TitleCulto, ContainerCulto, FlexContainer } from './Styles';
+
 import Cadastro from './Cadastro';
 function App() {
   const SELECIONAR = 0;
@@ -34,34 +36,35 @@ function App() {
   }
 
   return (
-    <div>
-      <h1>Culto de Jovens e Adolescentes 18/04/2021</h1>
+    <>
+    <Container>
+      <TitleCulto>Culto do Circulo de Oração 25/04/2021</TitleCulto>
       {culto !== SELECIONAR && <div onClick={()=>setCulto(SELECIONAR)}>Voltar</div>}
       {culto === SELECIONAR ? 
-        <div>    
-          <div onClick={()=> setCulto(PRIMEIRO)}>
-            1° Culto 
-            Horario: 17:00 às 18:00
-            Direção: Liderança dos Adolescentes
-            Banda: Expressão de Louvor
-            Preletor: Pastor João Wagner
-            Vagas: {VAGASTOTAIS - countCulto1}
-          </div>
-          <div onClick={()=> setCulto(SEGUNDO)}>
-            2° Culto 
-            Horario: 18:30 às 19:30
-            Direção: Liderança dos Jovens
-            Banda: Expressão de Louvor
-            Preletor: Dc. Elon
-            Vagas: {VAGASTOTAIS - countCulto2}
-          </div>
-        </div>
+        <FlexContainer>    
+          <ContainerCulto onClick={()=> setCulto(PRIMEIRO)}>
+            <h4 style={{textAlign: 'center'}}><b>1° Culto </b><br/></h4>
+            <b>Horario:</b> 17:00 às 18:00<br/>
+            <b>Direção:</b> Liderança dos Adolescentes<br/>
+            <b>Banda:</b> Expressão de Louvor<br/>
+            <b>Preletor:</b> Pastor João Wagner<br/>
+            <span style={{color: 'red'}}><b>Vagas:</b> {VAGASTOTAIS - countCulto1}</span>
+          </ContainerCulto>
+          <ContainerCulto onClick={()=> setCulto(PRIMEIRO)}>
+            <h4 style={{textAlign: 'center'}}><b>2° Culto </b><br/></h4>
+            <b>Horario:</b> 18:30 às 19:30<br/>
+            <b>Direção:</b> Liderança dos Adolescentes<br/>
+            <b>Banda:</b> Expressão de Louvor<br/>
+            <b>Preletor:</b> Pastor João Wagner<br/>
+            <span style={{color: 'red'}}><b>Vagas:</b> {VAGASTOTAIS - countCulto2}</span>
+          </ContainerCulto>
+        </FlexContainer>
         :
         <Cadastro culto={culto} lista={culto === 1? cadastros1: cadastros2} />
       }
 
-    </div>
-    
+    </Container>
+      </>
   );
 }
 
