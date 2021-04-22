@@ -25,8 +25,8 @@ function App() {
   const [direcao2, setDirecao2] = useState("Liderança Círculo de Oração");
   const [banda1, setBanda1] = useState("Expressão de Louvor");
   const [banda2, setBanda2] = useState("Expressão de Louvor");
-  const [preletor1, setPreletor1] = useState("Pr. João Wagner");
-  const [preletor2, setPreletor2] = useState("Pr. João Wagner");
+  //const [preletor1, setPreletor1] = useState("Pr. João Wagner");
+  //const [preletor2, setPreletor2] = useState("Pr. João Wagner");
   const [vagas1, setVagas1] = useState(50);
   const [vagas2, setVagas2] = useState(50);
  
