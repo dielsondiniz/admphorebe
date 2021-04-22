@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-import { Container, TitleCulto, ContainerCulto, FlexContainer } from './Styles';
-
+import { Container, TitleCulto, ContainerCulto, FlexContainer, Voltar } from './Styles';
+import GlobalStyle from './styles/Styles';
+import KeyboardReturnIcon from '@material-ui/icons/KeyboardReturn';
+import Button from '@material-ui/core/Button';
 import Cadastro from './Cadastro';
 function App() {
   const SELECIONAR = 0;
@@ -39,7 +41,19 @@ function App() {
     <>
     <Container>
       <TitleCulto>Culto do Circulo de Oração 25/04/2021</TitleCulto>
-      {culto !== SELECIONAR && <div onClick={()=>setCulto(SELECIONAR)}>Voltar</div>}
+      {culto !== SELECIONAR && 
+      <Voltar>
+
+        <Button
+        onClick={()=>setCulto(SELECIONAR)}
+        variant="contained"
+        
+        startIcon={<KeyboardReturnIcon />}
+      >
+        Voltar
+      </Button>
+      </Voltar>
+      }
       {culto === SELECIONAR ? 
         <FlexContainer>    
           <ContainerCulto onClick={()=> setCulto(PRIMEIRO)}>
@@ -60,9 +74,9 @@ function App() {
           </ContainerCulto>
         </FlexContainer>
         :
-        <Cadastro culto={culto} lista={culto === 1? cadastros1: cadastros2} />
+        <Cadastro culto={culto} lista={culto === 1? cadastros1: cadastros2} loadCadastros={()=>loadCadastros()} />
       }
-
+    <GlobalStyle/>
     </Container>
       </>
   );

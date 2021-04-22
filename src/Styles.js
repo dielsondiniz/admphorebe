@@ -12,6 +12,14 @@ export const TitleCulto = styled.h1`
     font-weight: 600;
     color: #a37435;
 `;
+export const Voltar = styled.div`
+    width: 800px;
+    max-width: 100%;
+    text-align: left;
+    margin: auto;
+    margin-top: 30px;
+}
+`;
 export const FlexContainer = styled.div`
     padding: 0;
     margin: 0;
@@ -19,6 +27,10 @@ export const FlexContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media(max-width: 800px) {
+        flex-direction: column;
+        position: relative;
+      }
 `;
 export const ContainerCulto = styled.div`
     cursor: pointer;
