@@ -92,7 +92,7 @@ function App() {
             <b>Horario:</b> 17:00 às 18:00<br/>
             <b>Direção:</b> {direcao1}<br/>
             <b>Banda:</b> {banda1}<br/>
-            <b>Preletor:</b> {preletor1}<br/>
+            {/*<b>Preletor:</b> {preletor1}<br/>*/}
             <span style={{color: 'red'}}><b>Vagas:</b> {vagas1 - countCulto1}</span>
           </ContainerCulto>
           <ContainerCulto onClick={()=> setCulto(SEGUNDO)}>
@@ -100,7 +100,7 @@ function App() {
             <b>Horario:</b> 18:30 às 19:30<br/>
             <b>Direção:</b> {direcao2}<br/>
             <b>Banda:</b> {banda2}<br/>
-            <b>Preletor:</b> {preletor2}<br/>
+            {/*<b>Preletor:</b> {preletor2}<br/>*/}
             <span style={{color: 'red'}}><b>Vagas:</b> {vagas2 - countCulto2}</span>
           </ContainerCulto>
         </FlexContainer>
