@@ -57,6 +57,10 @@ export default function Cadastro(props) {
         <>
         <div>
             <b>Preencha o formulário abaixo para informar sua participação no {props.culto}º culto</b>
+            <br/>
+            {props.vagas <= 0 && 
+            <i>Esse culto já execedeu o limite de vagas, porém realize seu cadastro, havendo necessidade realizaremos um terceiro culto</i>
+            }
         </div>
 
         <div style={{width: '800px', maxWidth: '100%', margin: 'auto', padding: '25px', background: 'rgb(243 243 243 / 80%)', boxShadow: '6px 6px 7px 4px rgb(97 97 97 / 77%)'}}>

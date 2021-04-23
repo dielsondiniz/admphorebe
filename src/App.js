@@ -86,7 +86,11 @@ function App() {
       </Voltar>
       }
       {culto === SELECIONAR ? 
-        <FlexContainer>    
+      <>
+            { vagas2 + vagas1 - countCulto2 - countCulto1 <= 0 &&
+              <span style={{color: 'red'}}><i>Obs.: Continue fazendo seu cadastro, nós iremos verificar a possibilidade de realizar um terceiro culto</i></span>
+            }    
+        <FlexContainer>
           <ContainerCulto onClick={()=> setCulto(PRIMEIRO)}>
             <h4 style={{textAlign: 'center'}}><b>1° Culto </b><br/></h4>
             <b>Horario:</b> 17:00 às 18:00<br/>
@@ -102,10 +106,15 @@ function App() {
             <b>Banda:</b> {banda2}<br/>
             {/*<b>Preletor:</b> {preletor2}<br/>*/}
             <span style={{color: 'red'}}><b>Vagas:</b> {vagas2 - countCulto2}</span>
+           
           </ContainerCulto>
         </FlexContainer>
+          <span>
+            <i>OBSERVAÇÃO: Favor preencher a lista, mesmo que já tenha ultrapassado o número de vagas. Havendo um determinado número de pessoas impossibilitadas de participar dos cultos, buscaremos uma alternativa para que você não seja prejudicado. Como por exemplo a possibilidade de um terceiro culto.</i>
+          </span>
+        </>
         :
-        <Cadastro culto={culto} lista={culto === 1? cadastros1: cadastros2} loadCadastros={()=>loadCadastros()} dataCulto={data} />
+        <Cadastro culto={culto} lista={culto === 1? cadastros1: cadastros2} loadCadastros={()=>loadCadastros()} dataCulto={data} vagas={culto === 1? vagas1 - countCulto1: vagas2 - countCulto2} />
       }
     <GlobalStyle/>
     </Container>
