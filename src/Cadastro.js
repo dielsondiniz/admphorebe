@@ -48,7 +48,12 @@ export default function Cadastro(props) {
         let url = 'https://sheetdb.io/api/v1/b375knfkod0r3';
         axios.post(url, {"data": {"nome": nome, "adulto": adulto, "crianca": crianca, "data": props.dataCulto, "horario": props.culto, "obs": obs }}).then((response)=>{
             props.loadCadastros();
-            alert("obrigado por se cadastrar")
+            setNome("");
+            setAdulto(0);
+            setCrianca(0);
+            setObs("");
+            alert("obrigado por se cadastrar");
+
         }
         )
       }
