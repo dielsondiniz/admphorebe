@@ -109,7 +109,7 @@ function App() {
            
           </ContainerCulto>
         </FlexContainer>
-          <span>
+          <span style={{color: 'red'}}>
             <i>OBSERVAÇÃO: Favor preencher a lista, mesmo que já tenha ultrapassado o número de vagas. Havendo um determinado número de pessoas impossibilitadas de participar dos cultos, buscaremos uma alternativa para que você não seja prejudicado. Como por exemplo a possibilidade de um terceiro culto.</i>
           </span>
         </>
