@@ -93,7 +93,8 @@ function App() {
         <FlexContainer>
           <ContainerCulto onClick={()=> setCulto(PRIMEIRO)}>
             <h4 style={{textAlign: 'center'}}><b>1° Culto </b><br/></h4>
-            <b>Horario:</b> 17:00 às 18:00<br/>
+            <b>Horario:</b> 18:00 às 19:00<br/>
+            <b>De 19:00 às 19:20 - Céia do Senhor</b><br/>
             <b>Direção:</b> {direcao1}<br/>
             <b>Banda:</b> {banda1}<br/>
             {/*<b>Preletor:</b> {preletor1}<br/>*/}
@@ -101,7 +102,8 @@ function App() {
           </ContainerCulto>
           <ContainerCulto onClick={()=> setCulto(SEGUNDO)}>
             <h4 style={{textAlign: 'center'}}><b>2° Culto </b><br/></h4>
-            <b>Horario:</b> 18:30 às 19:30<br/>
+            <b>Horario:</b> 19:30 às 20:30<br/>
+            <b>De 20:30 às 20:50 - Céia do Senhor</b><br/>
             <b>Direção:</b> {direcao2}<br/>
             <b>Banda:</b> {banda2}<br/>
             {/*<b>Preletor:</b> {preletor2}<br/>*/}
