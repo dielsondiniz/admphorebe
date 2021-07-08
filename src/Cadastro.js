@@ -61,10 +61,10 @@ export default function Cadastro(props) {
     return (
         <>
         <div>
-            <b>Preencha o formulário abaixo para informar sua participação no {props.culto}º culto</b>
+            <b>Preencha o formulário abaixo para informar sua participação no culto</b>
             <br/>
             {props.vagas <= 0 && 
-            <i>Esse culto já execedeu o limite de vagas, porém realize seu cadastro, havendo necessidade realizaremos um terceiro culto</i>
+            <i>Esse culto já execedeu o limite de vagas, porém realize seu cadastro assim faremos um culto online e terá preferência na participação do proximo culto</i>
             }
         </div>
 
