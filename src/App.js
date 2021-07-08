@@ -93,7 +93,7 @@ function App() {
         <FlexContainer>
           <ContainerCulto onClick={()=> setCulto(PRIMEIRO)}>
             <h4 style={{textAlign: 'center'}}><b>Culto Único </b><br/></h4>
-            <b>Horario:</b> 18:00 às 20:00<br/>
+            <b>Horario:</b> 19:00 às 20:30<br/>
             
             <b>Direção:</b> {direcao1}<br/>
             <b>Banda:</b> {banda1}<br/>
