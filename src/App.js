@@ -8,7 +8,7 @@ import Cadastro from './Cadastro';
 function App() {
   const SELECIONAR = 0;
   const PRIMEIRO = 1;
-  const SEGUNDO = 2;
+  //const SEGUNDO = 2;
 
   //const VAGASTOTAIS = 33;
 
@@ -22,9 +22,9 @@ function App() {
   const [data, setData] = useState('25/04/2021');
   const [nomeCulto, setNomeCulto] = useState("Culto do Círculo de Oração");
   const [direcao1, setDirecao1] = useState("Liderança Círculo de Oração");
-  const [direcao2, setDirecao2] = useState("Liderança Círculo de Oração");
+  //const [direcao2, setDirecao2] = useState("Liderança Círculo de Oração");
   const [banda1, setBanda1] = useState("Expressão de Louvor");
-  const [banda2, setBanda2] = useState("Expressão de Louvor");
+  //const [banda2, setBanda2] = useState("Expressão de Louvor");
   //const [preletor1, setPreletor1] = useState("Pr. João Wagner");
   //const [preletor2, setPreletor2] = useState("Pr. João Wagner");
   const [vagas1, setVagas1] = useState(50);
@@ -56,9 +56,9 @@ function App() {
         setData(data.data)
         setNomeCulto(data.nomeCulto1)
         setDirecao1(data.direcao1)
-        setDirecao2(data.direcao2)
+        //setDirecao2(data.direcao2)
         setBanda1(data.banda1)
-        setBanda2(data.banda2)
+        //setBanda2(data.banda2)
         //setPreletor1(data.preletor1)
         //setPreletor2(data.preletor2)
         setVagas1(data.vagas1)
@@ -92,27 +92,31 @@ function App() {
             }    
         <FlexContainer>
           <ContainerCulto onClick={()=> setCulto(PRIMEIRO)}>
-            <h4 style={{textAlign: 'center'}}><b>1° Culto </b><br/></h4>
-            <b>Horario:</b> 18:00 às 19:00<br/>
+            <h4 style={{textAlign: 'center'}}><b>Culto Único </b><br/></h4>
+            <b>Horario:</b> 18:00 às 20:00<br/>
             
             <b>Direção:</b> {direcao1}<br/>
             <b>Banda:</b> {banda1}<br/>
             {/*<b>Preletor:</b> {preletor1}<br/>*/}
             <span style={{color: 'red'}}><b>Vagas:</b> {vagas1 - countCulto1}</span>
           </ContainerCulto>
+          {/*
           <ContainerCulto onClick={()=> setCulto(SEGUNDO)}>
             <h4 style={{textAlign: 'center'}}><b>2° Culto </b><br/></h4>
             <b>Horario:</b> 19:30 às 20:30<br/>
             
             <b>Direção:</b> {direcao2}<br/>
             <b>Banda:</b> {banda2}<br/>
-            {/*<b>Preletor:</b> {preletor2}<br/>*/}
+            {//<b>Preletor:</b> {preletor2}<br/>
+            }
             <span style={{color: 'red'}}><b>Vagas:</b> {vagas2 - countCulto2}</span>
            
-          </ContainerCulto>
+          </ContainerCulto>*/}
         </FlexContainer>
           <span style={{color: 'red'}}>
-            <i>OBSERVAÇÃO: Favor preencher a lista, mesmo que já tenha ultrapassado o número de vagas. Havendo um determinado número de pessoas impossibilitadas de participar dos cultos, buscaremos uma alternativa para que você não seja prejudicado. Como por exemplo a possibilidade de um terceiro culto.</i>
+            {//<i>OBSERVAÇÃO: Favor preencher a lista, mesmo que já tenha ultrapassado o número de vagas. Havendo um determinado número de pessoas impossibilitadas de participar dos cultos, buscaremos uma alternativa para que você não seja prejudicado. Como por exemplo a possibilidade de um terceiro culto.</i>
+            }
+            <i>OBSERVAÇÃO: Caso já tenha excedido a quantidade de vagas, preencha a lista da mesma forma, assim faremos a transmissão do culto e o membro que não conseguiu participar do culto e tiver preenchido a lista tera preferencia na participação do proximo culto</i>
           </span>
         </>
         :
