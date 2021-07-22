@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 import Cadastro from './Cadastro';
 function App() {
   const SELECIONAR = 0;
-  const PRIMEIRO = 1;
+  //const PRIMEIRO = 1;
   //const SEGUNDO = 2;
 
   //const VAGASTOTAIS = 33;
@@ -90,8 +90,9 @@ function App() {
             { vagas2 + vagas1 - countCulto2 - countCulto1 <= 0 &&
               <span style={{color: 'red'}}><i>Obs.: Continue fazendo seu cadastro, nós iremos verificar a possibilidade de realizar um terceiro culto</i></span>
             }    
+            <h2 style={{textAlign: 'center'}}><b>Cadastro não necessário esse domingo</b><br/></h2>
         <FlexContainer>
-          <ContainerCulto onClick={()=> setCulto(PRIMEIRO)}>
+          <ContainerCulto>
             <h4 style={{textAlign: 'center'}}><b>Culto Único </b><br/></h4>
             <b>Horario:</b> 18:00 às 19:30<br/>
             
@@ -116,7 +117,9 @@ function App() {
           <span style={{color: 'red'}}>
             {//<i>OBSERVAÇÃO: Favor preencher a lista, mesmo que já tenha ultrapassado o número de vagas. Havendo um determinado número de pessoas impossibilitadas de participar dos cultos, buscaremos uma alternativa para que você não seja prejudicado. Como por exemplo a possibilidade de um terceiro culto.</i>
             }
-            <i>OBSERVAÇÃO: Caso já tenha excedido a quantidade de vagas, preencha a lista da mesma forma, assim faremos a transmissão do culto e o membro que não conseguiu participar do culto e tiver preenchido a lista tera preferencia na participação do proximo culto</i>
+            {//<i>OBSERVAÇÃO: Caso já tenha excedido a quantidade de vagas, preencha a lista da mesma forma, assim faremos a transmissão do culto e o membro que não conseguiu participar do culto e tiver preenchido a lista tera preferencia na participação do proximo culto</i>
+            }
+            <i>OBSERVAÇÃO: Esse domingo não será necessário realizar cadastro para participação no culto</i>
           </span>
         </>
         :
