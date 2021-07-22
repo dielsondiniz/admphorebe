@@ -90,7 +90,8 @@ function App() {
             { vagas2 + vagas1 - countCulto2 - countCulto1 <= 0 &&
               <span style={{color: 'red'}}><i>Obs.: Continue fazendo seu cadastro, nós iremos verificar a possibilidade de realizar um terceiro culto</i></span>
             }    
-            <h2 style={{textAlign: 'center'}}><b>Cadastro não necessário esse domingo</b><br/></h2>
+            <h2 style={{textAlign: 'center'}}><b>Cadastro não necessário esse domingo - "Em experiência"</b><br/></h2>
+            
         <FlexContainer>
           <ContainerCulto>
             <h4 style={{textAlign: 'center'}}><b>Culto Único </b><br/></h4>
